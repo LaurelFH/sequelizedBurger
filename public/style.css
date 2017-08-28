@@ -1,0 +1,91 @@
+
+@import url('//fonts.googleapis.com/css?family=Lobster');
+
+
+/* lobster-regular - latin */
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/lobster-v18-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Lobster'), local('Lobster-Regular'),
+       url('../fonts/lobster-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/lobster-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/lobster-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/lobster-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/lobster-v18-latin-regular.svg#Lobster') format('svg'); /* Legacy iOS */
+}
+
+
+
+body{
+
+	background-color: yellow;
+	background-image: url('wallpaper.png');
+	font-family: 'Lobster';
+	font-size: 22px;
+}
+
+/*html {
+  background-image: url('wallpaper.png');
+}*/
+
+h1{
+
+	color: white;
+	font-family: 'Lobster', cursive;
+	font-weight: bolder;
+	font-size: x-large;
+
+}
+
+p{
+
+	font-family: 'Lobster', cursive;
+
+}
+
+/*li{
+	
+	border: black 5px solid;
+
+}*/
+#createUpdate{
+	/*border: red 5px solid;*/
+	 text-align: center;
+	 background-color: #FFFF71;
+	padding: 10px;
+
+}
+
+#burgersEaten{
+
+	/*border: yellow 5px solid;*/
+	 text-align: center;
+	 background-color: #D46A6A;
+	/*opacity: .5;*/
+	padding: 10px;
+	padding-bottom: 25px;
+}
+
+
+#burgersToEat{
+	/*border: blue 5px solid;*/
+	 text-align: center;
+	 background-color: #55AA55;
+	padding: 10px;
+	padding-bottom: 25px;
+}
+
+#titleDiv{
+
+	margin: auto;
+    width: 50%;
+    /*border: 5px solid green;*/
+    padding: 10px;
+	/*font-family: 'Pacifico', cursive;*/
+	font-family: 'Lobster', cursive;
+	text-align: center;
+	color: white;
+
+}
