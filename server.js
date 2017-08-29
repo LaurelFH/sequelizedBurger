@@ -11,6 +11,8 @@ var port = process.env.PORT || 3000;
 
 var app = express();
 
+//require the database
+var db = require("./models");
 
 // Serve static content for the app from the "views/assets" directory in the application directory.
 app.use(express.static("public"));
@@ -31,5 +33,11 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
+//RESYNC THE FILES
+db.sequelize.sync().then(function(){
 
-app.listen(port);
+	app.listen(port, function(){
+		console.log("The bugers app is listening on port:" + port);
+	});
+});
+// app.listen(port);

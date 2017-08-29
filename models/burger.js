@@ -4,24 +4,21 @@
 //REMOVING ORM REFERENCES 
 //SET UP THE BURGER MODEL 
 
-module.exports = function(sequelize, DataTypes(){
+module.exports = function(sequelize, DataTypes) {
 var burger = sequelize.define("burger", {
-
-  id:
-  burger_name:
-  devoured:
-  date:
-
+  id: DataTypes.STRING,
+  burger_name: DataTypes.STRING,
+  devoured: DataTypes.BOOLEAN,
+  date: DataTypes.DATE
 });
-return burger;
 
+return burger;
 };
 
-
-
-
+//DOUBLE CHECK DATATYPES
+//http://sequelize.readthedocs.io/en/2.0/api/datatypes/
+//OLD ORM INFO 
 // var burger={
-
 // // selectAll: function(cb) {
 // //     // orm.selectAll("burgers", function(res) {
 // //     //   cb(res);

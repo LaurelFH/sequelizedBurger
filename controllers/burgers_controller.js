@@ -4,9 +4,38 @@ var burger = require("../models/burger.js");
 
 //1.  Create the router for the app, and export the router at the end of your file.
 var router = express.Router();
+
+
+
+// // // Helper function for SQL syntax.
+// function printQuestionMarks(num) {
+//   var arr = [];
+
+//   for (var i = 0; i < num; i++) {
+//     arr.push("?");
+//   }
+
+//   return arr.toString();
+// }
+
+// // Helper function for SQL syntax.
+// function objToSql(ob) {
+//   var arr = [];
+
+//   for (var key in ob) {
+//     if (Object.hasOwnProperty.call(ob, key)) {
+//       arr.push(key + "=" + ob[key]);
+//     }
+//   }
+
+//   return arr.toString();
+// }
+
+//ADDIGN SEQUELIZE'S ORM METHODS BELOW
+
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  burger.selectAll(function(data) {
+  db.burger.selectAll(function(data) {
     var hbsObject = {
       burgers: data
     };
@@ -16,7 +45,7 @@ router.get("/", function(req, res) {
 });
 
 router.post("/", function(req, res) {
-  burger.insertOne([
+  db.burger.insertOne([
     "burger_name", "devoured"
   ], [
     req.body.burger_name, false
@@ -30,7 +59,7 @@ router.put("/:id", function(req, res) {
 
   console.log("condition", condition);
 
-  burger.updateOne({
+  db.burger.updateOne({
     devoured: req.body.devoured
 },condition, function() {
     res.redirect("/");
